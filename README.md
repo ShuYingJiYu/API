@@ -45,6 +45,7 @@
 3. `xiaomi` - [小米音乐](https://web.music.xiaomi.com/)
 4. `kugou`- [酷狗音乐](https://www.kugou.com/)
 5. `baidu` - [百度音乐](https://music.taihe.com/)
+6. `kuwo` - [酷我音乐](https://mbox.kuwo.cn/)
 
 #### `raw ` 参数
 

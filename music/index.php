@@ -17,7 +17,6 @@ $arg = $get['arg'];
 switch ($site) {
     case 'netease':
         $api = new Meting('netease');
-        //replace your cookies
         $api->cookie('');
         break;
     case 'tencent':
@@ -31,6 +30,9 @@ switch ($site) {
         break;
     case 'baidu':
         $api = new Meting('baidu');
+        break;
+    case 'kuwo':
+        $api = new Meting('kuwo');
         break;
     default:
         echo json_encode(array('time' => time(), 'code' => 400, 'msg' => 'Please GET the right params'));
@@ -59,7 +61,9 @@ switch ($type) {
         echo $api->pic($arg);
         break;
     case 'url':
-        echo $api->url($arg, $bitrate = 114514);
+        if($site == 'netease')
+            echo $api->url($arg, $bitrate = 114514);
+        else echo $api->url($arg);
         break;
     case 'serch':
         echo $api->search($arg);
